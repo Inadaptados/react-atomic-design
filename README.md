@@ -1,75 +1,108 @@
-# Tienda Online - React Component Library
+# React Atomic Design - Component Library & E-commerce Demo
 
-Una aplicación de tienda online construida con React que también funciona como una biblioteca de componentes reutilizables con showcases interactivos.
+Una aplicación de demostración que implementa los principios de **Atomic Design** en React, funcionando como una tienda online completa y una biblioteca de componentes reutilizables con showcases interactivos.
+
+## 🎯 Objetivo del Proyecto
+
+Este proyecto demuestra la implementación práctica de **Atomic Design** de Brad Frost en React, mostrando cómo construir interfaces escalables y mantenibles mediante componentes atómicos reutilizables.
 
 ## 🚀 Demo en Vivo
 
-Visita la aplicación: [https://tu-usuario.github.io/my-app](https://tu-usuario.github.io/my-app)
+Visita la aplicación: [https://inadaptados.github.io/react-atomic-design](https://inadaptados.github.io/react-atomic-design)
+
+## 🧪 Atomic Design Structure
+
+### Átomos (Atoms)
+
+- **Button**: Componente base reutilizable con múltiples variantes
+
+### Moléculas (Molecules)
+
+- **Card**: Combinación de Button + elementos de producto
+- **List Item**: Elementos individuales de lista con interacciones
+
+### Organismos (Organisms)
+
+- **List**: Colección de Cards con funcionalidad de vista grid/lista
+- **Product Catalog**: Sistema completo de navegación de productos
+
+### Templates & Pages
+
+- **Showcases**: Páginas de demostración para cada componente
+- **E-commerce Layout**: Template principal de la aplicación
 
 ## 📋 Características
 
-### 🏪 Tienda Online Funcional
+### 🏪 E-commerce Demo Funcional
 
-- **Catálogo de productos** con imágenes reales
-- **Carrito de compras** persistente (localStorage)
-- **Búsqueda y filtros** por categoría, marca y disponibilidad
-- **Vista grid y lista** intercambiables
-- **Estados de productos** (en stock/agotado)
+- **Catálogo de productos** con 8 productos reales
+- **Carrito de compras** persistente con localStorage
+- **Búsqueda en tiempo real** por nombre, descripción y marca
+- **Filtros dinámicos** por categoría (smartphones, laptops, tablets, audio)
+- **Vista intercambiable** entre grid y lista
+- **Estados de producto** (en stock/agotado)
+- **Navegación responsive** adaptable a móviles
 
-### 🎨 Component Library & Showcases
+### 🎨 Component Library con Showcases
 
-- **ButtonShowcase**: Todas las variantes de botones con documentación
-- **CardShowcase**: Ejemplos de cards con diferentes estados
-- **ListShowcase**: Demostraciones de listas con productos reales
-- **Documentación interactiva** con código de ejemplo
+- **ButtonShowcase**: Documentación completa de variantes y estados
+- **CardShowcase**: Ejemplos con productos reales y casos de uso
+- **ListShowcase**: Demostraciones con filtros y estadísticas del catálogo
+- **Código de ejemplo** en vivo para cada componente
+- **Tablas de props** detalladas
+- **Casos de uso reales** documentados
 
 ### 🛠️ Arquitectura Moderna
 
-- **Separación de responsabilidades**: Componentes, servicios y estilos separados
-- **Servicios centralizados**: ProductService y CartService
-- **Hooks personalizados**: useProducts, useCart
-- **CSS modular**: Sin estilos inline, archivos CSS organizados
+- **Separación clara** entre componentes, servicios y estilos
+- **Servicios centralizados** para productos y carrito
+- **Hooks personalizados** (useProducts, useCart)
+- **CSS modular** sin librerías externas
 
 ## 🏗️ Estructura del Proyecto
 
 ```
-my-app/
+react-atomic-design/
 ├── public/
-│   ├── products/           # Imágenes reales de productos
+│   ├── products/              # Imágenes reales de productos
 │   │   ├── iPhone 14 Pro.jpg
 │   │   ├── MacBook Air M2.jpg
-│   │   └── ...
+│   │   ├── Samsung Galaxy S23.jpg
+│   │   ├── Dell XPS 13.jpeg
+│   │   ├── iPad Pro 12.9.jpeg
+│   │   ├── Sony WH-1000XM5.avif
+│   │   ├── Google Pixel 7.jpg
+│   │   └── Microsoft Surface Laptop 5.jpg
 │   └── index.html
 ├── src/
-│   ├── components/         # Componentes reutilizables
-│   │   ├── Button.jsx
-│   │   ├── Card.jsx
-│   │   ├── List.jsx
-│   │   ├── ButtonShowcase.jsx
-│   │   ├── CardShowcase.jsx
-│   │   └── ListShowcase.jsx
-│   ├── services/          # Lógica de negocio
-│   │   ├── productService.js
-│   │   └── cartService.js
-│   ├── styles/            # Estilos CSS modulares
-│   │   ├── App.css
-│   │   ├── Button.css
-│   │   ├── Card.css
-│   │   ├── List.css
-│   │   ├── ButtonShowcase.css
-│   │   ├── CardShowcase.css
-│   │   ├── ListShowcase.css
-│   │   └── globals.css
-│   ├── App.js
-│   └── index.js
+│   ├── components/            # Componentes Atomic Design
+│   │   ├── Button.jsx         # Átomo
+│   │   ├── Card.jsx           # Molécula
+│   │   ├── List.jsx           # Organismo
+│   │   ├── ButtonShowcase.jsx # Template
+│   │   ├── CardShowcase.jsx   # Template
+│   │   └── ListShowcase.jsx   # Template
+│   ├── services/             # Lógica de negocio
+│   │   ├── productService.js # Gestión de productos
+│   │   └── cartService.js    # Gestión del carrito
+│   ├── styles/               # CSS modular
+│   │   ├── globals.css       # Estilos globales
+│   │   ├── App.css          # Layout principal
+│   │   ├── Button.css       # Estilos del átomo
+│   │   ├── Card.css         # Estilos de la molécula
+│   │   ├── List.css         # Estilos del organismo
+│   │   └── *Showcase.css    # Estilos de templates
+│   ├── App.js               # Página principal
+│   └── index.js             # Punto de entrada
+├── package.json
 └── README.md
 ```
 
-## 🧩 Componentes
+## 🧩 Componentes (Atomic Design)
 
-### Button
+### 🔹 Button (Átomo)
 
-Componente de botón reutilizable con múltiples variantes.
+Componente base reutilizable con múltiples variantes y estados.
 
 ```jsx
 <Button
@@ -81,31 +114,47 @@ Componente de botón reutilizable con múltiples variantes.
 />
 ```
 
-**Props:**
+**Props disponibles:**
 
 - `text` (string): Texto del botón
-- `color` (string): "primary", "secondary", "success", "danger"
-- `variant` (string): "solid", "outline"
-- `onClick` (function): Función a ejecutar
+- `color`: "primary" | "secondary" | "success" | "danger"
+- `variant`: "solid" | "outline"
+- `onClick` (function): Manejador de eventos
 - `disabled` (boolean): Estado deshabilitado
+- `className` (string): Clases CSS adicionales
 
-### Card
+### 🔹 Card (Molécula)
 
-Componente para mostrar productos individuales.
+Combina múltiples átomos para mostrar información de producto.
 
 ```jsx
 <Card product={product} onAddToCart={handleAddToCart} showButton={true} />
 ```
 
-**Props:**
+**Props disponibles:**
 
-- `product` (object): Objeto con información del producto
+- `product` (object): Objeto con estructura del producto
 - `onAddToCart` (function): Función para agregar al carrito
-- `showButton` (boolean): Mostrar/ocultar botón
+- `showButton` (boolean): Controla visibilidad del botón
 
-### List
+**Estructura del objeto product:**
 
-Componente para mostrar listas de productos con vista grid/lista.
+```javascript
+{
+  id: 1,
+  name: "iPhone 14 Pro",
+  description: "Descripción del producto...",
+  price: 999.99,
+  image: "./products/iPhone 14 Pro.jpg",
+  inStock: true,
+  category: "smartphones",
+  brand: "Apple"
+}
+```
+
+### 🔹 List (Organismo)
+
+Organismo complejo que gestiona colecciones de productos.
 
 ```jsx
 <List
@@ -115,91 +164,115 @@ Componente para mostrar listas de productos con vista grid/lista.
 />
 ```
 
-**Props:**
+**Funcionalidades:**
 
-- `products` (array): Array de productos
-- `onAddToCart` (function): Función para agregar al carrito
-- `title` (string): Título de la lista
+- Toggle entre vista grid y lista
+- Gestión de productos vacíos
+- Títulos dinámicos con contadores
+- Responsive design automático
 
 ## 🔧 Servicios
 
 ### ProductService
 
-Maneja todas las operaciones relacionadas con productos.
+Simula una API REST con datos persistentes y operaciones asíncronas.
 
 ```javascript
 import { productService } from "./services/productService";
 
-// Obtener todos los productos
+// Operaciones disponibles
 const products = await productService.getAllProducts();
-
-// Buscar productos
-const results = await productService.searchProducts(query);
-
-// Filtrar por categoría
+const results = await productService.searchProducts("iPhone");
 const smartphones = await productService.getProductsByCategory("smartphones");
+const appleProducts = await productService.getProductsByBrand("Apple");
+const inStock = await productService.getInStockProducts();
+const categories = await productService.getCategories();
 ```
 
 ### CartService
 
-Gestiona el carrito de compras con persistencia.
+Gestión completa del carrito con persistencia en localStorage.
 
 ```javascript
-import { cartService } from "./services/cartService";
+import { cartService, useCart } from "./services/cartService";
 
-// Agregar producto
+// Hook personalizado
+const { cart, addProduct, removeProduct, totalItems, totalPrice } = useCart();
+
+// Métodos directos
 cartService.addProduct(product);
-
-// Obtener carrito
-const cart = cartService.getCart();
-
-// Obtener total
-const total = cartService.getTotalPrice();
+cartService.updateQuantity(productId, quantity);
+cartService.clearCart();
+const isProductInCart = cartService.isInCart(productId);
 ```
 
-## 📱 Características Responsive
+## 📊 Catálogo de Productos Real
 
-- **Diseño adaptativo** que funciona en desktop, tablet y móvil
-- **Navigation responsive** con menú colapsable
-- **Grid responsive** que se adapta al tamaño de pantalla
-- **Imágenes optimizadas** con lazy loading
+El proyecto incluye **8 productos reales** con imágenes auténticas:
 
-## 🎯 Funcionalidades Destacadas
+| Categoría      | Productos                                         | En Stock | Precio Promedio |
+| -------------- | ------------------------------------------------- | -------- | --------------- |
+| 📱 Smartphones | iPhone 14 Pro, Samsung Galaxy S23, Google Pixel 7 | 1/3      | $666            |
+| 💻 Laptops     | MacBook Air M2, Dell XPS 13, Surface Laptop 5     | 3/3      | $1,166          |
+| 📱 Tablets     | iPad Pro 12.9"                                    | 1/1      | $1,099          |
+| 🎧 Audio       | Sony WH-1000XM5                                   | 1/1      | $399            |
 
-### Carrito de Compras
+**Marcas disponibles:** Apple, Samsung, Google, Dell, Microsoft, Sony
 
-- **Persistencia** en localStorage
-- **Contador en tiempo real** en la navegación
-- **Estados de producto** (disponible/agotado)
-- **Gestión de cantidades**
+## 🎨 Design System
 
-### Búsqueda y Filtros
+### Paleta de Colores
 
-- **Búsqueda en tiempo real** por nombre, descripción y marca
-- **Filtros por categoría**: Smartphones, Laptops, Tablets, Audio
-- **Filtro por disponibilidad**
-- **Resultados dinámicos**
+```css
+:root {
+  --primary: #007bff; /* Azul principal */
+  --secondary: #6c757d; /* Gris secundario */
+  --success: #28a745; /* Verde éxito */
+  --danger: #dc3545; /* Rojo peligro */
+  --background: #f8f9fa; /* Fondo claro */
+  --text: #333; /* Texto principal */
+}
+```
 
-### Showcases Interactivos
+### Tipografía
 
-- **Documentación visual** de cada componente
-- **Ejemplos de código** en vivo
-- **Casos de uso reales**
-- **Tablas de props** detalladas
+- **Font Family:** Arial, sans-serif (sistema)
+- **Weights:** 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
+- **Scale:** 12px - 36px con proporción armónica
+
+### Espaciado
+
+- **Base unit:** 4px
+- **Scale:** 4px, 8px, 12px, 16px, 20px, 24px, 32px, 40px
+
+## 📱 Responsive Design
+
+### Breakpoints
+
+- **Mobile:** < 480px (single column)
+- **Tablet:** 481px - 768px (2 columns)
+- **Desktop:** > 769px (3+ columns)
+
+### Características Responsive
+
+- **Grid adaptativo** con CSS Grid
+- **Navegación colapsable** en móviles
+- **Imágenes optimizadas** con object-fit
+- **Touch-friendly** buttons (44px mínimo)
 
 ## 🚀 Instalación y Desarrollo
 
 ### Prerrequisitos
 
-- Node.js 16+
-- npm o yarn
+- Node.js 22+
+- npm 10+ o yarn 1.22+
 
-### Instalación
+### Instalación Local
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/my-app.git
-cd my-app
+# Clonar repositorio
+git clone https://github.com/Inadaptados/react-atomic-design.git
+cd react-atomic-design
 
 # Instalar dependencias
 npm install
@@ -208,126 +281,92 @@ npm install
 npm start
 ```
 
-La aplicación se abrirá en [http://localhost:3000](http://localhost:3000)
+**Servidor local:** [http://localhost:3000](http://localhost:3000)
 
 ### Scripts Disponibles
 
 ```bash
-# Desarrollo
-npm start          # Servidor de desarrollo
-
-# Producción
-npm run build      # Build para producción
-npm run deploy     # Deploy a GitHub Pages
-
-# Testing
-npm test           # Ejecutar tests
+npm start          # Desarrollo (puerto 3000)
+npm run build      # Build optimizado para producción
+npm run test       # Ejecutar test suite
+npm run deploy     # Deploy automático a GitHub Pages
 ```
 
-## 🌐 Deployment en GitHub Pages
+## 🌐 Deployment
 
-### Configuración Automática
+### GitHub Pages (Configurado)
 
-1. **Instalar gh-pages:**
-
-```bash
-npm install --save-dev gh-pages
-```
-
-2. **Agregar scripts al package.json:**
-
-```json
-{
-  "homepage": "https://tu-usuario.github.io/my-app",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
-}
-```
-
-3. **Deploy:**
+El proyecto ya está configurado para deploy automático:
 
 ```bash
 npm run deploy
 ```
 
-### Configuración Manual en GitHub
+**URL de producción:** [https://inadaptados.github.io/react-atomic-design](https://inadaptados.github.io/react-atomic-design)
 
-1. Ve a **Settings** > **Pages** en tu repositorio
-2. Selecciona **Source**: Deploy from a branch
-3. Selecciona **Branch**: gh-pages
-4. Click **Save**
+## 🤝 Contribución
 
-El sitio estará disponible en: `https://tu-usuario.github.io/my-app`
+### Workflow de Contribución
 
-## 🛠️ Tecnologías Utilizadas
+1. **Fork** el repositorio
+2. **Clone** tu fork localmente
+3. **Crear rama** para tu feature
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+4. **Desarrollar** siguiendo los estándares del proyecto
+5. **Testing** completo de cambios
+6. **Commit** con mensajes descriptivos
+   ```bash
+   git commit -m "feat: agregar componente Modal siguiendo Atomic Design"
+   ```
+7. **Push** y crear **Pull Request**
 
-- **React 18** - Biblioteca principal
-- **CSS3** - Estilos (sin librerías externas)
-- **LocalStorage** - Persistencia del carrito
-- **GitHub Pages** - Hosting gratuito
-- **Create React App** - Configuración base
+### Estándares de Código
 
-## 📊 Catálogo de Productos
+- **ESLint** configurado con React rules
+- **Prettier** para formateo consistente
+- **Conventional Commits** para mensajes
+- **Atomic Design** principles
 
-El proyecto incluye 8 productos de ejemplo:
+## 📚 Recursos y Referencias
 
-| Categoría   | Productos                                         | En Stock |
-| ----------- | ------------------------------------------------- | -------- |
-| Smartphones | iPhone 14 Pro, Samsung Galaxy S23, Google Pixel 7 | 1/3      |
-| Laptops     | MacBook Air M2, Dell XPS 13, Surface Laptop 5     | 3/3      |
-| Tablets     | iPad Pro 12.9"                                    | 1/1      |
-| Audio       | Sony WH-1000XM5                                   | 1/1      |
+### Atomic Design
 
-## 🎨 Guía de Estilo
+- [Atomic Design Methodology](https://atomicdesign.bradfrost.com/) - Brad Frost
+- [Design Systems Handbook](https://www.designbetter.co/design-systems-handbook) - InVision
 
-### Colores
+### React Best Practices
 
-- **Primary**: #007bff (Azul)
-- **Secondary**: #6c757d (Gris)
-- **Success**: #28a745 (Verde)
-- **Danger**: #dc3545 (Rojo)
-
-### Tipografía
-
-- **Font Family**: Arial, sans-serif
-- **Font Weights**: 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
-
-## 🔮 Próximas Funcionalidades
-
-- [ ] Autenticación de usuarios
-- [ ] Proceso de checkout completo
-- [ ] Integración con API real
-- [ ] Testing automatizado
-- [ ] Modo oscuro
-- [ ] Internacionalización (i18n)
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+- [React Documentation](https://react.dev/)
+- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- [React Patterns](https://reactpatterns.com/)
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para detalles.
+Este proyecto está bajo la **Licencia MIT** - ver [LICENSE](LICENSE) para más detalles.
 
-## 👨‍💻 Autor
+## 👥 Equipo
 
-**Tu Nombre**
+**Inadaptados Development Team**
 
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [tu-perfil](https://linkedin.com/in/tu-perfil)
+- **Autor Principal:** [Rodrigo Leanos Bermejo](https://github.com/inadaptados)
+- **Organización:** [Inadaptados](https://github.com/Inadaptados)
+- **Proyecto:** React Atomic Design Implementation
+
+### Contacto
+
+- 🐙 **GitHub:** [@Inadaptados](https://github.com/Inadaptados)
+- 🌐 **Website:** [inadaptados.dev](https://inadaptados.dev)
 
 ## 🙏 Agradecimientos
 
-- Create React App por la configuración base
-- Unsplash por las imágenes de placeholder
-- GitHub Pages por el hosting gratuito
+- **Brad Frost** por la metodología Atomic Design
+- **React Team** por la librería y documentación
+- **Create React App** por la configuración base
+- **GitHub** por el hosting gratuito en GitHub Pages
+- **Open Source Community** por las herramientas utilizadas
 
 ---
 
-⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!
+🚀 **¿Quieres contribuir?** ¡Las contribuciones son bienvenidas! Lee nuestra guía de contribución arriba.
