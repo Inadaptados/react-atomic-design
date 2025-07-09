@@ -1,0 +1,142 @@
+.button-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.showcase-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.showcase-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.button-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.button-code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #495057;
+  text-align: center;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+.use-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.use-case {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.use-case h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.use-case-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.props-table {
+  overflow-x: auto;
+}
+
+.props-documentation {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.props-documentation th,
+.props-documentation td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.props-documentation th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.props-documentation td code {
+  background-color: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #e83e8c;
+}
+
+.props-documentation tr:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .use-case-buttons {
+    flex-direction: column;
+  }
+
+  .props-documentation {
+    font-size: 14px;
+  }
+
+  .props-documentation th,
+  .props-documentation td {
+    padding: 8px 12px;
+  }
+}

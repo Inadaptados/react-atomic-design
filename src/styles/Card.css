@@ -1,0 +1,86 @@
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-width: 320px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1.05);
+}
+
+.card__title {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.card__description {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__price {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+.card__stock {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card__stock--in-stock {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.card__stock--out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.card__button {
+  width: 100%;
+  margin-top: 8px;
+}

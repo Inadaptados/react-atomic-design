@@ -1,0 +1,264 @@
+.list-showcase {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.showcase-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.showcase-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.list-demo {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+.list-code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #495057;
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.use-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.use-case {
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.use-case h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.use-case p {
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.use-case-description ul {
+  color: #555;
+  padding-left: 20px;
+}
+
+.use-case-description li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.view-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.view-type {
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.view-type h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 16px;
+}
+
+.view-type ul {
+  padding-left: 20px;
+  color: #555;
+}
+
+.view-type li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.feature {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.feature p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.props-table {
+  overflow-x: auto;
+}
+
+.props-documentation {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.props-documentation th,
+.props-documentation td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.props-documentation th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.props-documentation td code {
+  background-color: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #e83e8c;
+}
+
+.props-documentation tr:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .list-demo {
+    padding: 12px;
+  }
+
+  .use-cases,
+  .view-comparison,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .props-documentation {
+    font-size: 14px;
+  }
+
+  .props-documentation th,
+  .props-documentation td {
+    padding: 8px 12px;
+  }
+}
+
+.demo-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #007bff;
+}
+
+.filter-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filter-example {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+}
+
+.filter-example h3 {
+  color: #007bff;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #007bff;
+}

@@ -1,0 +1,112 @@
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button--primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.button--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button--secondary:hover:not(:disabled) {
+  background-color: #545b62;
+}
+
+.button--success {
+  background-color: #28a745;
+  color: white;
+}
+
+.button--success:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.button--danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button--danger:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.button--outline.button--primary {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.button--outline.button--primary:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+.button--outline.button--secondary {
+  background-color: transparent;
+  color: #6c757d;
+  border: 2px solid #6c757d;
+}
+
+.button--outline.button--secondary:hover:not(:disabled) {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button--outline.button--success {
+  background-color: transparent;
+  color: #28a745;
+  border: 2px solid #28a745;
+}
+
+.button--outline.button--success:hover:not(:disabled) {
+  background-color: #28a745;
+  color: white;
+}
+
+.button--outline.button--danger {
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+}
+
+.button--outline.button--danger:hover:not(:disabled) {
+  background-color: #dc3545;
+  color: white;
+}
