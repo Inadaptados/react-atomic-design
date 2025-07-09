@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "react-atomic-design",
+  "homepage": "https://inadaptados.github.io/react-atomic-design",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
